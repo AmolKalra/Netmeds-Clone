@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- nav section start -->
+
+    <nav class="nav">
+      <div class="nav1 center">
+        <img
+          src="./Remed.jpg"
+          width="20%"
+          style="border-radius: 20%;"
+          alt=""
+          onclick="window.location.href='home.html'"
+        />
+      </div>
+      <div class="nav2">
+        <select id="">
+          <option value="">Deliver to <span>110008</span></option>
+          <option value=""></option>
+          <option value=""></option>
+          <option value=""></option>
+        </select>
+        <input type="search" name="" id="" />
+      </div>
+      <div class="flex nav3">
+        <p><i class="fa fa-upload"></i>Upload Rx</p>
+        <p><i class="fa fa-cart-plus"></i> Cart</p>
+        <p>
+          <i class="fa fa-user-circle"></i>
+          <span onclick="window.location.href='signup.html'">Sign In</span> /
+          <span onclick="window.location.href='signup.html'"> Sign up</span>
+        </p>
+      </div>
+    </nav>
+    <nav>
+      <!-- 2nd nav section start-->
+      <section class="flex nav-section-2">
+        <div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png"
+            alt=""
+          />
+          Medicine
+        </div>
+        <div>
+          <img
+            src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg"
+            alt=""
+          />
+          Wellness
+        </div>
+        <div>
+          <img
+            src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/cold-and-fever.jpg?v=1"
+            alt=""
+          />
+          Lab Tests
+        </div>
+        <div>
+          <img
+            src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg"
+            alt=""
+          />
+          Beauty
+        </div>
+        <div>
+          <img
+            src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1"
+            alt=""
+          />
+          Health Corner
+        </div>
+      </section>
+      <!-- 2nd nav section end -->
+    </nav>
+    <div id="cart"></div>
+    <div id="container"></div>
+  </body>
+</html>
+
+<script>
+  var carta = JSON.parse(localStorage.getItem("cartdata"));
+  console.log(carta);
+
+  // displaycart(cart)
+  // function price(elem) {
+  //     var select = document.getElementById("cart").value
+
+  // if(select=="low"){
+  //      cartarr.sort(function (a,b) {
+  //          return Number(a.price)-Number(b.price)
+
+  //      })
+  //  }
+  // if(select=="high"){
+  //      cartarr.sort(function (a,b) {
+  //          return Number(b.price)-Number(a.price)
+
+  //      })
+  //  }
+  //  if(select=="not"){
+  //      alert("Plz select the value which have been given to you")
+  //  }
+  //  displaycart(cartarr)
+
+  // }
+
+  carta.map(function (element) {
+    var div = document.createElement("div");
+
+    var img = document.createElement("img");
+    img.setAttribute("id", "b-img");
+    img.setAttribute("src", element.img);
+
+    var des = document.createElement("p");
+    des.setAttribute("class", "para1");
+    des.textContent = element.des;
+
+    var smalltxt = document.createElement("p");
+    smalltxt.setAttribute("class", "para2");
+    smalltxt.textContent = element.smalltxt;
+
+    var price = document.createElement("p");
+    price.setAttribute("class", "para3");
+    price.textContent = element.price;
+
+    var mrp = document.createElement("p");
+    mrp.setAttribute("class", "para4");
+    mrp.textContent = element.mrp;
+    localStorage.setItem("data2", JSON.stringify(cart));
+
+    var btn = document.createElement("button");
+    btn.textContent = "Place Order";
+    btn.setAttribute("id", "btnn");
+    btn.addEventListener("click", function () {
+      window.location.href = "order.html";
+    });
+
+    div.append(img, des, smalltxt, price, mrp, btn);
+
+    document.querySelector("#container").append(div);
+    localStorage.setItem("cart", JSON.stringify(carta));
+  });
+</script>
