@@ -433,6 +433,10 @@ input {
       }
       #containerG .h1,.p{
           color: #24aeb1;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          padding-top: 30px;
       }
 
       #box {
@@ -454,7 +458,7 @@ input {
         margin-top: 10px;
       
       }
-      
+
      /* div > .img{
        width: 20%;
         
@@ -474,48 +478,66 @@ input {
       width: 40%;
     }
     .img{
-      margin-top: 20px;
+      /* margin-top: 20px; */
      width: 100px;
      /* border: 1px solid red; */
     }
-
+    .sign:hover{
+      cursor: pointer;
+    }
+    .btn:hover{
+      cursor: pointer;
+    }
 </style>
 </head>
 <body>
    <!-- nav section start -->
-    <nav class="nav">
-      <div class="nav1 center">
-        <img
-          src="./Remed.jpg"
-          alt=""
-          onclick="window.location.href='home.html'"
-          width="20%"
-          style="border-radius: 20%;"
-        />
-      </div>
-      <div class="nav2">
-        <select id="">
-          <option value="">Deliver to <span>110008</span></option>
-          <option value=""></option>
-          <option value=""></option>
-          <option value=""></option>
-        </select>
-        <input type="search" name="" id="" />
-      </div>
-      <div class="flex nav3">
-        <p> <i class="fa fa-upload"></i>Upload Rx</p>
-        <p><i class="fa fa-cart-plus"></i> Cart</p>
-        <p> <i class="fa fa-user-circle"></i>  <span onclick="window.location.href='signup.html'">Sign In</span> / <span onclick="window.location.href='signup.html'"> Sign up</span></p>
-      </div>
-    </nav>
+   <nav class="nav">
+    <div class="nav1 center">
+      <img
+        src="./Remed.jpg"
+        alt=""
+        onclick="window.location.href='home.html'"
+        width="20%"
+        style="border-radius: 20%"
+        class="sign"
+      />
+    </div>
+    <div class="nav2 flex">
+      <select id="">
+        <option value="">Deliver to 110008</option>
+        s
+        <option value="">Bangalore</option>
+        <option value="">Pune</option>
+        <option value="">Kolkata</option>
+      </select>
+      <input
+        type="search"
+        name=""
+        id=""
+        placeholder="Search for medicine &amp; wellness products..."
+      />
+    </div>
+    <div class="flex nav3">
+      <p><i class="fa fa-upload"></i>Upload Rx</p>
+      <p class="sign" onclick="window.location.href='cart.html'">
+        <i class="fa fa-cart-plus"></i> Cart
+      </p>
+      <p>
+        <i class="fa fa-user-circle"></i>
+        <span class="sign" onclick="window.location.href='signup.html'">Sign In</span> / 
+        <span class="sign" onclick="window.location.href='signup.html'"> Sign up</span>
+      </p>
+    </div>
+  </nav>
     <nav>
         <!-- 2nd nav section start-->
       <section class="flex nav-section-2">
-        <div><img src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png" alt=""> Medicine</div>
-        <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg" alt=""> Wellness</div>
-        <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/cold-and-fever.jpg?v=1" alt=""> Lab Tests</div>
-        <div><img src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg" alt=""> Beauty</div>
-        <div><img src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1" alt=""> Health Corner</div>
+        <div><img class="sign" src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png" alt=""> Medicine</div>
+        <div><img class="sign" src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg" alt=""> Wellness</div>
+        <div><img class="sign" src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/cold-and-fever.jpg?v=1" alt=""> Lab Tests</div>
+        <div><img class="sign" src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg" alt=""> Beauty</div>
+        <div><img class="sign" src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1" alt=""> Health Corner</div>
     </section>
     <!-- 2nd nav section end -->
     </nav>
@@ -577,7 +599,7 @@ input {
 <div id="main-box">
   <div id="containerG"> 
       <div id="card">
-        <img class="img" onclick="window.location.href='home.html'" src="./Remed.jpg" alt="" width="20%" style="border-radius: 20%;">
+        <img class="img sign" onclick="window.location.href='home.html'" src="./Remed.jpg" alt="" width="20%" style="border-radius: 20%;">
         </div>
       <div class="card2"><p class="p">Netmeds.com, India Ki Pharmacy, is brought to you by the Dadha & Company – one of India’s most trusted<BR> pharmacies, with over 100 years’ experience in dispensing quality medicines.</p></div>
   </div>
@@ -621,8 +643,8 @@ input {
   <br>    <input class="input"  type="email" placeholder="Enter your email address">
   <hr>
   
-  <img class="img" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.NetmedsMarketplace.Netmeds&hl=en'" src="https://www.netmeds.com/assets/gloryweb/images/icons/play_store.png" alt="">
-  <img class="img" onclick="window.location.href='https://apps.apple.com/in/app/netmeds-india-ki-pharmacy/id1011070011'" src="https://www.netmeds.com/assets/gloryweb/images/icons/app_store.png" alt="">
+  <img class="img sign" onclick="window.location.href='https://play.google.com/store/apps/details?id=com.NetmedsMarketplace.Netmeds&hl=en'" src="https://www.netmeds.com/assets/gloryweb/images/icons/play_store.png" alt="">
+  <img class="img sign" onclick="window.location.href='https://apps.apple.com/in/app/netmeds-india-ki-pharmacy/id1011070011'" src="https://www.netmeds.com/assets/gloryweb/images/icons/app_store.png" alt="">
   
   
   
