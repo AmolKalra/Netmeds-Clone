@@ -107,6 +107,9 @@ img {
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+.sign:hover{
+  cursor: pointer;
+}
     </style>
   </head>
   <body>
@@ -125,6 +128,7 @@ img {
           onclick="window.location.href='home.html'"
           width="20%"
           style="border-radius: 20%"
+          class="sign"
         />
       </div>
       <div class="nav2 flex">
@@ -144,13 +148,13 @@ img {
       </div>
       <div class="flex nav3">
         <p><i class="fa fa-upload"></i>Upload Rx</p>
-        <p onclick="window.location.href='cart.html'">
+        <p class="sign" onclick="window.location.href='cart.html'">
           <i class="fa fa-cart-plus"></i> Cart
         </p>
         <p>
           <i class="fa fa-user-circle"></i>
-          <span onclick="window.location.href='signup.html'">Sign In</span> 
-          <span onclick="window.location.href='signup.html'"> Sign up</span>
+          <span class="sign" onclick="window.location.href='signup.html'"> Sign up</span> / 
+          <span class="sign" onclick="window.location.href='signup.html'">Sign In</span> 
         </p>
       </div>
     </nav>
@@ -161,6 +165,7 @@ img {
           <img
             src="https://cdn-icons-png.flaticon.com/512/1533/1533792.png"
             alt=""
+            class="sign"
           />
           Medicine
         </div>
@@ -168,6 +173,7 @@ img {
           <img
             src="https://www.netmeds.com/assets/gloryweb/images/icons/ordermedicinnew.svg"
             alt=""
+            class="sign"
           />
           Wellness
         </div>
@@ -175,6 +181,7 @@ img {
           <img
             src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/cold-and-fever.jpg?v=1"
             alt=""
+            class="sign"
           />
           Lab Tests
         </div>
@@ -182,6 +189,7 @@ img {
           <img
             src="https://www.netmeds.com/assets/gloryweb/images/icons/new-icons/beauty_products.svg"
             alt=""
+            class="sign"
           />
           Beauty
         </div>
@@ -189,6 +197,7 @@ img {
           <img
             src="https://www.netmeds.com/images/cms/wysiwyg/category/v2/img/women-s-care.jpg?v=1"
             alt=""
+            class="sign"
           />
           Health Corner
         </div>
@@ -822,11 +831,13 @@ img {
           class="img"
           src="https://www.netmeds.com/assets/gloryweb/images/icons/play_store.png"
           alt=""
+          class="sign"
         />
         <img
           class="img"
           src="https://www.netmeds.com/assets/gloryweb/images/icons/app_store.png"
           alt=""
+          class="sign"
         />
       </div>
     </div>
